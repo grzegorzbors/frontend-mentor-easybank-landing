@@ -273,4 +273,26 @@ button,
 .header__links a:hover::before {
   opacity: 1;
 }
+
+.hero__image {
+  position: relative;
+  background-image: url("/images/bg-intro-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 17.5rem;
+}
+
+.hero__image::before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("/images/image-mockups.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  content: "";
+  -webkit-transform: translateY(14px);
+          transform: translateY(14px);
+}
 /*# sourceMappingURL=style.css.map */
