@@ -32,14 +32,6 @@
     padding-bottom: 1.065rem;
   }
 
-  button {
-    transition: opacity 300ms ease-in-out;
-
-    &:hover {
-      opacity: 0.75;
-    }
-  }
-
   &__logo {
     img {
       width: 8.8125rem;
