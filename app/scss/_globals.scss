@@ -24,7 +24,8 @@ body {
   }
 
   &.noscroll {
-    overflow: hidden;
+    position: fixed;
+    overflow-y: scroll;
   }
 }
 
@@ -143,21 +144,33 @@ a:hover {
   }
 }
 
-// Buttons
-button,
-.button {
+// Button
+button {
   padding: 0.875rem 2.1875rem;
-  background: linear-gradient(to left, $brightCyan, $limeGreen);
+  background-image: linear-gradient(to left, $brightCyan, $limeGreen);
   color: $white;
   font-weight: 700;
   border-radius: 3.125rem;
   border: 0;
   cursor: pointer;
   font-size: $font-small;
-  transition: opacity 300ms ease-in-out;
+  position: relative;
+  overflow: hidden;
 
-  &:hover {
-    opacity: 0.75;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.25);
+    opacity: 0;
+    transition: 150ms ease-in-out;
+  }
+
+  &:hover::before {
+    opacity: 1;
   }
 }
 

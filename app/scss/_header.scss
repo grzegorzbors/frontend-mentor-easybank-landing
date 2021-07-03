@@ -55,6 +55,7 @@
   }
 
   &__menu {
+    z-index: 100;
     position: absolute;
     width: calc(100% - 3rem);
     left: 50%;
